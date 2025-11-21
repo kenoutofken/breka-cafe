@@ -12,3 +12,7 @@
     @apply text-base md:text-lg leading-relaxed;
   }
 }
+
+html {
+  @apply bg-base-200;
+}

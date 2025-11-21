@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "address": "6533 Fraser St.",
+    "yearOpened": 2006,
+    "phone": "604-559-0900",
+    "image": "/images/locations/fraser.png"
+  },
+  {
+    "id": 2,
+    "address": "812 Bute St.",
+    "yearOpened": 2012,
+    "phone": "604-559-0900",
+    "image": "/images/locations/bute.png"
+  },
+  {
+    "id": 3,
+    "address": "855 Davie St.",
+    "yearOpened": 2013,
+    "phone": "604-559-0900",
+    "image": "/images/locations/davie.png"
+  },
+  {
+    "id": 4,
+    "address": "3750 West 4th Ave.",
+    "yearOpened": 2017,
+    "phone": "604-559-0900",
+    "image": "/images/locations/w4.png"
+  },
+  {
+    "id": 5,
+    "address": "821 Denman St.",
+    "yearOpened": 2018,
+    "phone": "604-559-0900",
+    "image": "/images/locations/denman.png"
+  },
+  {
+    "id": 6,
+    "address": "4554 Main St.",
+    "yearOpened": 2021,
+    "phone": "604-559-0900",
+    "image": "/images/locations/main.png"
+  },
+  {
+    "id": 7,
+    "address": "740 West Hastings St.",
+    "yearOpened": 2022,
+    "phone": "604-559-0900",
+    "image": "/images/locations/hastings.png"
+  },
+  {
+    "id": 8,
+    "address": "2434 East Hastings St.",
+    "yearOpened": 2024,
+    "phone": "604-559-0900",
+    "image": "/images/locations/east-hastings.png"
+  }
+]
