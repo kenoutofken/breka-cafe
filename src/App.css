@@ -2,3 +2,25 @@
 @plugin "daisyui" {
   themes: all;
 }
+
+:root {
+  --color-base-200: #eadfd5;
+  --color-base-300: #cbaf96;
+  --color-primary: #6e4555;
+  --color-primary-content: #ffffff;
+  --color-base-content: #0e0c0d;
+  --color-secondary: #406e8e;
+  --color-secondary-content: #ffffff;
+  --color-accent: #f8f5f1;
+}
+
+.text-header {
+  font-family: "Playfair Display Variable", serif;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}

@@ -37,7 +37,7 @@ export function AboutUs() {
         duration: 0.1,
       });
 
-      tl.to(overlayRef.current, { opacity: 0.5, ease: "none", duration: 0.2 });
+      tl.to(overlayRef.current, { opacity: 0.65, ease: "none", duration: 0.2 });
 
       tl.fromTo(
         textRef.current,
@@ -89,14 +89,15 @@ export function AboutUs() {
   return (
     <section
       ref={container}
-      className="relative flex justify-center w-full min-h-screen"
+      id="aboutUs"
+      className="relative flex justify-center w-full min-h-screen -scroll-mt-175"
     >
       <div className="text-start w-full flex justify-center">
         <div
           ref={overlayRef}
           className="bg-black opacity-0 absolute z-10 inset-0"
         ></div>
-        <div ref={imgRef} className="w-full max-w-[2500px] h-[50vh] px-6">
+        <div ref={imgRef} className="w-full h-[70vh] px-6">
           <img src="/images/cafe3.png" className="object-cover w-full h-full" />
         </div>
       </div>
@@ -105,8 +106,10 @@ export function AboutUs() {
         ref={textRef}
         className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[80%] text-white"
       >
-        <h2 className="text-4xl font-extrabold mb-4">A VANCOUVER FAVOURITE</h2>
-        <p className="text-lg mb-4">
+        <h2 className="text-4xl 2xl:text-6xl text-header !text-white font-extrabold mb-6">
+          A VANCOUVER FAVOURITE
+        </h2>
+        <p className="text-lg 2xl:text-3xl mb-6">
           Breka Bakery & Cafe is a local family business born in 2006 at Fraser
           and 49th, in the lively neighbourhood of Sunset. We took over a
           well-established German bakery and have stayed true to its roots,
@@ -114,7 +117,7 @@ export function AboutUs() {
           strudel and freshly baked artisan rye breads (among others) are still
           made following some of the original recipes.
         </p>
-        <p className="text-lg">
+        <p className="text-lg 2xl:text-3xl">
           Regularly voted among Vancouver’s best bakeries and cafes, Breka’s
           reputation has always been based on word-of-mouth: thanks to
           Vancouverites and visitors alike, it is traveling around the clock at
@@ -127,14 +130,14 @@ export function AboutUs() {
         ref={textRef2}
         className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[80%] text-white"
       >
-        <p className="text-lg mb-4">
+        <p className="text-lg 2xl:text-3xl mb-6">
           High-quality beverages, breads, donuts, pastries, sandwiches, cakes,
           cookies and more can now be found – 24 hours a day, 7 days a week, 365
           days a year – at each of our 8 locations on Fraser Street, Bute
           Street, Davie Street, West 4th Avenue, Denman Street, Main Street,
           West Hastings Street and East Hastings Street.
         </p>
-        <p className="text-lg mb-4">
+        <p className="text-lg 2xl:text-3xl mb-6">
           Aside from being a local favourite spot for enjoying the company of
           friends (and treats!), we offer catering for all your gatherings and
           celebrations. Breka has even become a prominent feature behind the
@@ -149,14 +152,16 @@ export function AboutUs() {
         ref={textRef3}
         className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[80%] text-white"
       >
-        <p className="text-lg mb-4">
+        <p className="text-lg 2xl:text-3xl mb-6">
           Whether you're a long-time regular at our original store on Fraser or
           a new customer at one of our other five locations, we’re here for all
           your sweet or savoury cravings — it doesn’t matter if it’s midnight or
           during the middle of your day.
         </p>
-        <p className="text-lg mb-4">We’re always happy to see you!</p>
-        <p>
+        <p className="text-lg 2xl:text-3xl mb-6">
+          We’re always happy to see you!
+        </p>
+        <p className="text-lg 2xl:text-3xl">
           <em>With lots of love,</em>
           <br /> The Breka Family
         </p>

@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { MapPinIcon, PhoneArrowDownLeftIcon } from "@heroicons/react/16/solid";
+import { motion } from "framer-motion";
+
+motion;
 
 export function Locations() {
   gsap.registerPlugin(useGSAP);
@@ -56,38 +58,65 @@ export function Locations() {
   return (
     <section
       ref={container}
-      className="relative flex flex-col justify-center w-full min-h-screen py-12"
+      id="locations"
+      className="relative flex flex-col justify-center items-center w-full pt-64 py-12 -scroll-mt-32"
     >
-      <div className="px-6">
-        <div className="text-4xl font-bold mb-4">Locations</div>
-        <div className="text-lg">
+      <div className="flex flex-col items-center max-w-[2500px] px-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-4xl 2xl:text-6xl text-header font-extrabold mb-6"
+        >
+          OUR LOCATIONS
+        </motion.div>
+        <div className="text-lg 2xl:text-3xl">
           Since 2006, we have opened {locations.length} locations across the
           city of Vancouver. Come and visit one of our locations below!
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="w-full mt-12"
+        >
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {locations.map((loc) => (
+              <div
+                ref={locationCard}
+                key={loc.id}
+                className="flex flex-col justify-between rounded shadow-md bg-base-100 overflow-hidden"
+              >
+                <motion.img
+                  src={loc.image}
+                  alt={loc.name}
+                  className="overflow-hidden aspect-square object-cover w-full"
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { type: "ease", stiffness: 300 },
+                  }}
+                />
+                <div className="p-6 relative z-50 bg-accent text-center">
+                  <p className="text-3xl text-header mb-4">{loc.address}</p>
+                  <p className="text-base text-black mb-4">{loc.phone}</p>
+                  <span className="flex gap-4">
+                    <button className="btn btn-primary flex-1">
+                      Order Online
+                    </button>
+                    <button
+                      className="btn btn-secondary
+                     flex-1"
+                    >
+                      View Map
+                    </button>
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
-      <ul className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-4">
-        {locations.map((loc) => (
-          <li
-            ref={locationCard}
-            key={loc.id}
-            className="bg-white rounded-lg shadow-md"
-          >
-            <img
-              src="/images/cafe2.png"
-              alt={loc.name}
-              className="mb-4 rounded"
-            />
-            <div className="px-6 pb-6 text-center">
-              <p className="text-xl font-bold">{loc.address}</p>
-              <p className="text-base text-black mb-4">{loc.phone}</p>
-              <span className="flex gap-4">
-                <button className="btn btn-outline flex-1">Order Online</button>
-                <button className="btn btn-outline flex-1">View Map</button>
-              </span>
-            </div>
-          </li>
-        ))}
-      </ul>
     </section>
   );
 }

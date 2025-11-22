@@ -74,7 +74,7 @@ export function Hero() {
       tl.to(
         textRef.current,
         { opacity: 1, ease: "none" },
-        0.5 // end time of the fade
+        0.7 // end time of the fade
       );
 
       gsap.fromTo(
@@ -99,7 +99,7 @@ export function Hero() {
   return (
     <section
       ref={container}
-      className="flex items-center w-screen bg-base-200 overflow-hidden"
+      className="flex justify-center items-center w-screen bg-base-200 overflow-hidden"
     >
       <div ref={heroRef} className="flex gap-6 items-center">
         <div ref={imgRef} className="flex-shrink-0 w-full">
@@ -113,14 +113,18 @@ export function Hero() {
           ref={textRef}
           className="flex flex-col gap-6 items-start justify-center w-1/2"
         >
-          <div className="text-4xl font-extrabold">ALWAYS WELCOMING, 24/7</div>
-          <p className="text-lg max-w-[80%]">
+          <div className="text-4xl 2xl:text-6xl text-header font-extrabold">
+            ALWAYS WELCOMING
+          </div>
+          <p className="text-lg 2xl:text-3xl max-w-[80%]">
             Step inside and experience the warmth of our café. From freshly
             prepared pastries to handcrafted espresso, we’re here to make every
             visit feel inviting and familiar. Relax, work, or unwind — our space
             is designed for connection, comfort, and great flavour.
           </p>
-          <button className="btn btn-lg btn-outline">Order Online</button>
+          <button className="btn btn-lg btn-primary 2xl:btn-xl">
+            Order Online
+          </button>
         </div>
         <div
           ref={scrollRef}

@@ -15,4 +15,5 @@
 
 html {
   @apply bg-base-200;
+  scroll-behavior: smooth;
 }
