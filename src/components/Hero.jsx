@@ -74,24 +74,8 @@ export function Hero() {
       tl.to(
         textRef.current,
         { opacity: 1, ease: "none" },
-        0.7 // end time of the fade
-      );
-
-      gsap.fromTo(
-        scrollRef.current,
-        { opacity: 1, loop: true },
-        {
-          opacity: 0,
-          scrollTrigger: {
-            trigger: imgRef.current,
-            start: "center center",
-            end: "20% top",
-            scrub: true,
-            markers: false,
-            pinned: true,
-          },
-        }
-      );
+        1 // end time of the fade
+      );  
     },
     { scope: container }
   );

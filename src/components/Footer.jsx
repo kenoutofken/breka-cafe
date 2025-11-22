@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook } from "react-icons/fa";
 export function Footer() {
   return (
     <footer className="relative z-50 w-full min-h-32 bg-primary mt-48">
-      <div className="max-w-[2500px] flex justify-between mx-auto py-6 px-6 text-start text-primary-content">
+      <div className="max-w-[2500px] flex justify-between mx-auto py-6 px-6 text-start/ text-primary-content">
         <span className="text-base">
           © 2025 Breka Bakery & Café. All rights reserved.
           <br></br>
