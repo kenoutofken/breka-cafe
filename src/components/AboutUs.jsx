@@ -98,7 +98,10 @@ export function AboutUs() {
           className="bg-black opacity-0 absolute z-10 inset-0"
         ></div>
         <div ref={imgRef} className="w-full h-[70vh] px-6">
-          <img src="/images/cafe3.png" className="object-cover w-full h-full" />
+          <img
+            src="/images/cafe_exterior.jpg"
+            className="object-cover w-full h-full"
+          />
         </div>
       </div>
 

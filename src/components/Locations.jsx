@@ -101,11 +101,11 @@ export function Locations() {
                   <p className="text-3xl text-header mb-4">{loc.address}</p>
                   <p className="text-base text-black mb-4">{loc.phone}</p>
                   <span className="flex gap-4">
-                    <button className="btn btn-primary flex-1">
+                    <button className="btn btn-primary rounded flex-1">
                       Order Online
                     </button>
                     <button
-                      className="btn btn-secondary
+                      className="btn btn-outline rounded
                      flex-1"
                     >
                       View Map

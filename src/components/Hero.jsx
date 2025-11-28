@@ -2,6 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { motion } from "framer-motion";
 import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -25,6 +26,8 @@ export function Hero() {
           markers: false,
         },
       });
+
+      tl.to(scrollRef.current, { opacity: 0, duration: 0.5 });
 
       // 1️⃣ Width animation uses 50% of timeline
       tl.fromTo(
@@ -75,7 +78,7 @@ export function Hero() {
         textRef.current,
         { opacity: 1, ease: "none" },
         1 // end time of the fade
-      );  
+      );
     },
     { scope: container }
   );
@@ -88,7 +91,7 @@ export function Hero() {
       <div ref={heroRef} className="flex gap-6 items-center">
         <div ref={imgRef} className="flex-shrink-0 w-full">
           <img
-            src="/images/cafe.png"
+            src="/images/cafe.jpg"
             className="shadow-2xl object-cover w-full h-full"
           />
         </div>
@@ -110,12 +113,16 @@ export function Hero() {
             Order Online
           </button>
         </div>
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 2 }}
           ref={scrollRef}
-          className="absolute bottom-10 right-[50%] translate-y-[50%] text-sm text-white"
+          className="absolute bottom-0 w-full h-[20%] flex flex-col items-center justify-end text-center text-xl text-white bg-gradient-to-b from-black/0 to-black/80 pb-6"
         >
+          Scroll Down
           <ArrowDownCircleIcon className="h-8 w-8" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
