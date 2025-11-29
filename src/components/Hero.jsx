@@ -2,8 +2,8 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { motion } from "framer-motion";
 import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 

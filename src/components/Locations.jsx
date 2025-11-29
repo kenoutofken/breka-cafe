@@ -59,7 +59,7 @@ export function Locations() {
     <section
       ref={container}
       id="locations"
-      className="relative flex flex-col justify-center items-center w-full pt-64 py-12 -scroll-mt-32"
+      className="relative flex flex-col justify-center items-center w-full pt-64 py-12"
     >
       <div className="flex flex-col items-center max-w-[2500px] px-6">
         <motion.div
