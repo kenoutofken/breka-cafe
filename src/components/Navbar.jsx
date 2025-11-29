@@ -20,7 +20,7 @@ export function Navbar() {
         </div>
 
         <div class="flex-none hidden xl:block pr-6">
-          <ul class="menu menu-horizontal font-semibold text-primary text-lg flex items-center">
+          <ul class="menu menu-horizontal font-medium text-primary text-lg flex items-center">
             <li>
               <a href="#">Our Locations</a>
             </li>
