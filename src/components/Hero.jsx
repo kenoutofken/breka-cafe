@@ -29,7 +29,6 @@ export function Hero() {
 
       tl.to(scrollRef.current, { opacity: 0, duration: 0.5 });
 
-      // 1️⃣ Width animation uses 50% of timeline
       tl.fromTo(
         heroRef.current,
         {
@@ -38,17 +37,15 @@ export function Hero() {
         {
           width: "2500px",
           ease: "none",
-          duration: 0.5, // 50% of timeline
+          duration: 0.5,
         },
         0
       );
 
-      // 2️⃣ Dummy tween to fill the remaining 50%
       tl.to({}, { duration: 0.5 });
 
       tl.to(heroRef.current, {}, 0.5);
 
-      // Image: zoom + move, anchored on the left-center
       tl.fromTo(
         imgRef.current,
         {
@@ -65,20 +62,16 @@ export function Hero() {
         0
       );
 
-      // Text: fade in next to it
+      tl.to({}, { duration: 0.1 });
+
       tl.fromTo(
         textRef.current,
         { opacity: 0 },
         { opacity: 1, ease: "none" },
-        0.5 // start
+        0.5
       );
 
-      // End the opacity at 0.5 progress
-      tl.to(
-        textRef.current,
-        { opacity: 1, ease: "none" },
-        1 // end time of the fade
-      );
+      tl.to(textRef.current, { opacity: 1, ease: "none" }, 1);
     },
     { scope: container }
   );
@@ -118,7 +111,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2 }}
           ref={scrollRef}
-          className="absolute bottom-0 w-full h-[20%] flex flex-col items-center justify-end text-center text-xl text-white bg-gradient-to-b from-black/0 to-black/80 pb-6"
+          className="absolute bottom-0 w-full h-[20%] flex flex-col items-center justify-end text-center text-xl text-white bg-gradient-to-b from-black/0 to-black/80 pb-12"
         >
           Scroll Down
           <ArrowDownCircleIcon className="h-8 w-8" />

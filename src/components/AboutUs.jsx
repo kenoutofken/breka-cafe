@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 export function AboutUs() {
-  gsap.registerPlugin(useGSAP); // register the hook to avoid React version discrepancies
+  gsap.registerPlugin(useGSAP);
 
   const container = useRef();
   const imgRef = useRef();
@@ -42,49 +42,48 @@ export function AboutUs() {
       tl.fromTo(
         textRef.current,
         {
-          autoAlpha: 0, // opacity + visibility
+          autoAlpha: 0,
         },
         {
           autoAlpha: 1,
           ease: "none",
-          duration: 0.1, // next 10% of the scrub
+          duration: 0.1,
         },
-        0.3 // start when the image tween ends
+        0.3
       );
 
-      // Fade text 1 out
-      tl.to(textRef.current, { autoAlpha: 0, y: -500, duration: 0.1 });
+      tl.to({}, { duration: 0.1 });
 
-      // Fade text 2 in
+      tl.to(textRef.current, { autoAlpha: 0, y: -500, duration: 0.5 });
+
       tl.fromTo(
         textRef2.current,
         { autoAlpha: 0 },
         { autoAlpha: 1, ease: "none", duration: 0.1 },
-        ">0" // start immediately after previous
+        ">0"
       );
 
-      // Fade text 2 out
+      tl.to({}, { duration: 0.1 });
 
-      tl.to(textRef2.current, { autoAlpha: 0, y: -500, duration: 0.1 });
-
-      // Fade text 3 in
+      tl.to(textRef2.current, { autoAlpha: 0, y: -500, duration: 0.5 });
 
       tl.fromTo(
         textRef3.current,
         { autoAlpha: 0 },
         { autoAlpha: 1, ease: "none", duration: 0.1 },
-        ">0" // start immediately after previous
+        ">0"
       );
 
-      // Hold text 3
-      tl.to(textRef3.current, { autoAlpha: 0, y: -500, duration: 0.1 });
+      tl.to({}, { duration: 0.1 });
+
+      tl.to(textRef3.current, { autoAlpha: 0, y: -500, duration: 0.5 });
 
       tl.to(overlayRef.current, { opacity: 0, ease: "none", duration: 0.2 });
 
       return () => tl.kill();
     },
     { scope: container }
-  ); // <-- scope is for selector text (optional)
+  );
 
   return (
     <section

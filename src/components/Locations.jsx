@@ -97,7 +97,7 @@ export function Locations() {
                     transition: { type: "ease", stiffness: 300 },
                   }}
                 />
-                <div className="p-6 relative z-50 bg-accent text-center">
+                <div className="p-6 relative z-10 bg-accent text-center">
                   <p className="text-3xl text-header mb-4">{loc.address}</p>
                   <p className="text-base text-black mb-4">{loc.phone}</p>
                   <span className="flex gap-4">

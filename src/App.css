@@ -44,7 +44,7 @@ body {
 }
 
 .embla__slide {
-  flex: 0 0 33%; /* 100% / 5 = 20% → 5 visible slides */
+  flex: 0 0 33%;
   min-width: 0;
 }
 
@@ -52,6 +52,6 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* keep aspect ratio, fill frame */
+  object-fit: cover;
   object-position: center;
 }
